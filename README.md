@@ -1,4 +1,5 @@
 # automat-hybridapp
+[![Build Status](https://travis-ci.org/susovan87/automat-hybridapp.svg?branch=develop)](https://travis-ci.org/susovan87/automat-hybridapp)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 > Hybrid mobile app's functional testing automation made easy
