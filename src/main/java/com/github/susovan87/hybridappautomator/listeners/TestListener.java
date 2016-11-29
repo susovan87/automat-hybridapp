@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  *******************************************************************************/
-package in.susovan87.hybridappautomator.listeners;
+package com.github.susovan87.hybridappautomator.listeners;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -21,8 +21,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import in.susovan87.hybridappautomator.app.BaseApp;
-import in.susovan87.hybridappautomator.common.Screenshot;
+import com.github.susovan87.hybridappautomator.app.BaseApp;
+import com.github.susovan87.hybridappautomator.common.Screenshot;
 
 public class TestListener implements ITestListener {
 

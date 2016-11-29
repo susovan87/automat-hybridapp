@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  *******************************************************************************/
-package in.susovan87.hybridappautomator.test;
+package com.github.susovan87.hybridappautomator.test;
 
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
@@ -24,11 +24,12 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import in.susovan87.hybridappautomator.app.BaseApp;
-import in.susovan87.hybridappautomator.common.DevConfig;
-import in.susovan87.hybridappautomator.common.DriverBuilder;
-import in.susovan87.hybridappautomator.common.Platform;
-import in.susovan87.hybridappautomator.listeners.TestListener;
+import com.github.susovan87.hybridappautomator.app.BaseApp;
+import com.github.susovan87.hybridappautomator.common.DevConfig;
+import com.github.susovan87.hybridappautomator.common.DriverBuilder;
+import com.github.susovan87.hybridappautomator.common.Platform;
+import com.github.susovan87.hybridappautomator.listeners.TestListener;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 

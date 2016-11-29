@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  *******************************************************************************/
-package in.susovan87.hybridappautomator.screen;
+package com.github.susovan87.hybridappautomator.screen;
 
 import java.util.Arrays;
 
@@ -20,7 +20,8 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import in.susovan87.hybridappautomator.common.DriverBuilder;
+import com.github.susovan87.hybridappautomator.common.DriverBuilder;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 

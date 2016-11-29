@@ -11,15 +11,16 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  *******************************************************************************/
-package in.susovan87.hybridappautomator.app;
+package com.github.susovan87.hybridappautomator.app;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 
 import org.testng.Reporter;
 
-import in.susovan87.hybridappautomator.common.Screenshot;
-import in.susovan87.hybridappautomator.screen.AbstractScreen;
+import com.github.susovan87.hybridappautomator.common.Screenshot;
+import com.github.susovan87.hybridappautomator.screen.AbstractScreen;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 

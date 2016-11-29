@@ -8,8 +8,6 @@ This code contains a framework component (yet to setup [travis-ci](https://travi
 publish artifacts to [Maven](https://mvnrepository.com/)) and sample test project inside `src/test/system`.
 
 
-[TOC]
-
 ## Problem statement
 If you are building hybrid apps like me and prefer to design layouts using `HTML`, `Javascript` 
 and then build your iOS or Android application using popular hybrid application development 

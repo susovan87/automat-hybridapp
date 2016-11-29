@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  *******************************************************************************/
-package in.susovan87.hybridappautomator.screen;
+package com.github.susovan87.hybridappautomator.screen;
 
 import java.util.concurrent.TimeUnit;
 

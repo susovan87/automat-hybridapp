@@ -11,14 +11,15 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  *******************************************************************************/
-package in.susovan87.hybridappautomator.common;
+package com.github.susovan87.hybridappautomator.common;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import in.susovan87.hybridappautomator.app.BaseApp;
+import com.github.susovan87.hybridappautomator.app.BaseApp;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
