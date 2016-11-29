@@ -1,5 +1,6 @@
 # automat-hybridapp
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 The main goal of this project is to automate mobile app's functional testing. This code contains a framework component (to promote reusability) and sample project inside `src/test/system` to describe how to consume this framework.
 
 I am using [Appium](http://appium.io/), an open source app automation framework which works perfectly well with `native`, `hybrid` or `mobile web apps` and has support for iOS, Android and Windows apps.
