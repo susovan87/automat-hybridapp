@@ -19,4 +19,4 @@ git:
 branches:
   only:
   - master
-  - stable
+  - develop
