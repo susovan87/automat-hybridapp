@@ -2,6 +2,8 @@ allprojects {
   apply plugin: 'java'
   apply plugin: 'eclipse'
 
+  sourceCompatibility = 1.8
+  
   group='in.susovan87.hybridappautomator'
   version='0.1.0'
 
@@ -29,6 +31,8 @@ artifacts {
   archives sourcesJar
   archives javadocJar
 }
+
+defaultTasks 'clean', 'build'
 
 
 // ideviceinstaller -u "f1c8aea9fbecd08786648d97ba0df717347ddbaf" -i /Users/susovan/Documents/pswgit/susghosh/automob/app/PerceptiveExperience-Appstore.ipa
