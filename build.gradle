@@ -1,11 +1,18 @@
 allprojects {
+  buildscript {
+    repositories { jcenter() }
+    dependencies { classpath 'com.bmuschko:gradle-nexus-plugin:2.3.1' }
+  }
+
   apply plugin: 'java'
   apply plugin: 'eclipse'
-
-  sourceCompatibility = 1.8
+  apply plugin: 'com.bmuschko.nexus'
   
-  group='in.susovan87.hybridappautomator'
-  version='0.1.0'
+  sourceCompatibility = 1.8
+
+  group='com.github.susovan87'
+  archivesBaseName = "hybridappautomator"
+  version='0.1.0-SNAPSHOT'
 
   repositories { jcenter() }
 
@@ -17,19 +24,46 @@ allprojects {
   }
 }
 
-task sourcesJar(type: Jar, dependsOn: classes) {
-  classifier = 'sources'
-  from sourceSets.main.allSource
+extraArchive {
+  sources = true
+  tests = false
+  javadoc = true
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc) {
-  classifier = 'javadoc'
-  from javadoc.destinationDir
+nexus {
+  sign = true
+  repositoryUrl = "${nexusUrl}/service/local/staging/deploy/maven2"
+  snapshotRepositoryUrl = "${nexusUrl}/content/repositories/snapshots"
 }
 
-artifacts {
-  archives sourcesJar
-  archives javadocJar
+modifyPom {
+  project {
+    name 'hybridappautomator'
+    packaging 'jar'
+    description 'Automate functional testing for hybrid apps'
+    url 'https://github.com/susovan87/automat-hybridapp'
+
+    scm {
+      connection 'scm:git:git://github.com/susovan87/automat-hybridapp.git/'
+      developerConnection 'scm:git:git@github.com:susovan87/automat-hybridapp.git'
+      url 'https://github.com/susovan87/automat-hybridapp'
+    }
+
+    licenses {
+      license {
+        name 'The Apache License, Version 2.0'
+        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+      }
+    }
+
+    developers {
+      developer {
+        id 'susovan87'
+        name 'Susovan Ghosh'
+        email 'susovan87@gmail.com'
+      }
+    }
+  }
 }
 
 defaultTasks 'clean', 'build'

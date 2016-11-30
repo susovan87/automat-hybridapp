@@ -1,22 +1,24 @@
 language: java
-
 jdk:
-  - oraclejdk8
-  
+- oraclejdk8
 install: echo "skip 'gradle assemble' step"
-script: gradle build --continue
-
+script: ./gradlew clean build uploadArchives -PnexusUsername="${SONATYPE_USERNAME}" -PnexusPassword="${SONATYPE_PASSWORD}"
 before_cache:
- - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
- directories:
- - $HOME/.gradle/caches/
- - $HOME/.gradle/wrapper/
-
+  directories:
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 git:
   depth: 3
-  
 branches:
   only:
   - master
   - develop
+before_install:
+- openssl aes-256-cbc -K $encrypted_7659bf225d24_key -iv $encrypted_7659bf225d24_iv
+  -in secring.gpg.enc -out secring.gpg -d
+env:
+  global:
+  - secure: sXwRBr5YlgHF50J6bOn6JhvaLQj9PqtbTOn7hA8uGikYfhKkSDwBdvFGauU2daHmuGvlQP110vQCygS8lpjJ3cG3uy9a1WDQila4y+poH276Eua8OPuXKvz/GuHO/TD3Uybl9PiqHRrxbDjG/pvK74fSnjdOJOqyN0kRKb0twfXnvhD/URLf448Y3fjhgdslbk037S/v8d+4EePH9e5Dsrq5f28DNWXz78mKILQUAPTnVgwVxYZoEjk6mDCZtltieZP+pI05sfqwqRx1bFemtzKZuUiCy9ETZBOF/X2V6/ktefrqKfnrZKkBv9ybHLBBwTxnL+WoJjpHXuzyq86+R/T/3JhwmfIVVHuqsK1DTCoyAaiKYuDLf42TQN/53XBNGYCe4tOXkVAoshIAqmy6AN5Uw27hJ8GO9Iy194K/h6kRjrm81jc4F6TTyCo/VwChhoEmjwg4eUI3PR4fC3MJ/lgsWvghGlsJ32fFjYLciiSMgoNmNTSv41AlcV6NgRws9zMefjBd4c7pYlGgE2Dmx0Mwngt6HMzCfZC1MHakE133ofKvx10GboeuenCUE8j8TgYBMRKB24JRSqQqUr1rDSc+km1zpIudHeNKtx13kv7LbpPggjVRiFuKgY6E1ZQKDHorfZcv6HLDfkAU0JRVsNoOqMaBC4S9g8kq3rvRYgg=
+  - secure: bGdxpILjLXPPn57lGN/qB73LOmITrglg2do4e5WDwgK+9Qh2klGP/Uf61wyiyBhJ369uOqG87C7Bf1TS36N4Tflxd8yOqt3TD2s1kSUBlMOSCQIKpeEHx3e03fiQTu96qw6yyE2KhtOV5d3Cxq3KzvF2A24kKOp/Bv4lmCLHMzuuN+LIbNFZkYkeKLcyFk0X1cks9Wlf6JymJJDg0gcX7jlspfJup3648F59Q3jBXCDzgwnKV1ZRSRIehMSWAiAD3OThDc4J8prM2O5GYbxpFZnVg/sp/6LPP5mAJICLlKwPFdFh5zstniVqXY2yOJB3Jt4iqMme9/Zbv451dUTqeEBVE/JAjKXkDbUZD3xpI0WYf9O3twpBeaEAxI4w3iwL4/UmIL8nny5TdGTCB2J4Yo2wQf+X8HR1vZaKrEAzkO9wlOCDwTWmKjh+rSmHuAr2aK+wsGNxChalnkRQsRN1xxgyy2bS+pTw6quLk/jhZsZvfN4Insk5RgiXranmgXOdCjeGY/IYKkSA0EI3m0oT42IXwrM1TPw3gm47/LEaTyqnouuIS9IlcVHPFFoJtoMWCmWeaZK/UQ0pfUUXELd7OtvBMbqknNJKpnhVG4sM1ARkEryTpoFGygvhrCHwM7/Ct6A357hy+r8fKVKn276l1ZDE/jiTgV8P9hvN9/KIHb8=
