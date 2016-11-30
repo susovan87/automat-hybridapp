@@ -18,3 +18,4 @@ test-output/
 devconfig.properties
 
 .DS_Store
+secring.gpg
